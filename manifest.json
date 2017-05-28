@@ -1,0 +1,29 @@
+{
+  "name": "Inbox Reminders to Trello",
+  "description": "Add a reminder from Google Inbox to a Trello Card.",
+  "version": "0.1",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://inbox.google.com/*"
+      ],
+      "js": [
+        "inboxsdk.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+  "permissions": [
+    "identity",
+    "https://inbox.google.com/"
+  ],
+  "web_accessible_resources": [
+    "link.png"
+  ],
+  "manifest_version": 2
+}

@@ -14,13 +14,14 @@
         "content.css"
       ],
       "js": [
+        "jquery-1.7.1.min.js",
         "inboxsdk.js",
         "content.js"
       ],
       "run_at": "document_end"
     }
   ],
-  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://api.trello.com; object-src 'self'",
   "permissions": [
     "identity",
     "https://inbox.google.com/"

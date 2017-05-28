@@ -85,7 +85,8 @@ document.body.addEventListener('DOMSubtreeModified', function (ev) {
     const newLi = document.createElement('li');
     newLi.setAttribute('role', 'button');
     newLi.className = firstLi.className + ' aj-to-trello';
-    newLi.innerHTML = `<img src="${img}" title="click!">`;
+    newLi.innerHTML = `<img src="${img}" alt="add to trello">`;
+    newLi.title = 'Add to a Trello checklist';
     newLi.onclick = function() {
       showOptions(title);
     };
